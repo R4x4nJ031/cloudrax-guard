@@ -1,0 +1,2 @@
+[console_scripts]
+cloudrax-guard = cloudrax_guard.main:cli

@@ -1,0 +1,6 @@
+exceptions:
+  - rule_id: AZU-STOR-002
+    resource: azurerm_storage_account.appdata
+    reason: "Temporary public access during migration"
+    approved_by: "security-team"
+    expires_on: "2026-12-01"
