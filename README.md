@@ -347,43 +347,6 @@ Grades:
 
 This gives the project a useful risk summary instead of only a raw finding count.
 
-## Current Limitations
-
-The current version is a working MVP, not a finished commercial-grade scanner.
-
-Limitations today:
-- Terraform only
-- Azure-focused rule coverage is still small
-- no rule explanation command yet
-- `guardrail-config.yaml` is not yet actively enforced
-- no Bicep support yet
-- no SARIF output yet
-- no live Azure drift detection
-
-These are intentional scope cuts to keep the core engine understandable and demoable.
-
-## Roadmap
-
-Next good improvements:
-
-- `explain <RULE_ID>` command
-- rule metadata and compliance mappings
-- active policy config support from `guardrail-config.yaml`
-- additional Azure logging and identity policies
-- SARIF output for code scanning platforms
-- Bicep support
-
-## Why This Project Is Good For Product Security
-
-CloudRax Guard shows:
-- preventive cloud security instead of reactive detection
-- policy-as-code using OPA/Rego
-- Terraform parsing and normalization
-- CI/CD enforcement workflow design
-- exception governance and suppression visibility
-- engineering discipline through automated policy fixture tests
-
-That combination makes it a strong DevSecOps, cloud security, and product security portfolio project.
 
 ## Commands Summary
 
@@ -391,24 +354,6 @@ That combination makes it a strong DevSecOps, cloud security, and product securi
 cloudrax-guard scan examples/insecure
 cloudrax-guard scan examples/insecure --dry-run
 cloudrax-guard scan examples/insecure --format json --dry-run
-cloudrax-guard scan examples/secure --dry-run
-cloudrax-guard list-rules
-pytest -q
-```
-
-## Screenshot Checklist
-
-Create `docs/screenshots/` and save these exact files:
-
-- `cli-insecure-dry-run.png`
-- `cli-secure-pass.png`
-- `github-actions-scan-pass.png`
-- `list-rules-output.png`
-
-Suggested capture commands:
-
-```bash
-cloudrax-guard scan examples/insecure --dry-run
 cloudrax-guard scan examples/secure --dry-run
 cloudrax-guard list-rules
 pytest -q
