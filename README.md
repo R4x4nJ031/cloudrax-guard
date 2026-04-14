@@ -26,12 +26,8 @@ Add these screenshots to `docs/screenshots/` with the exact names below:
   What to capture: running `cloudrax-guard scan examples/secure --dry-run`
 - `github-actions-scan-pass.png`
   What to capture: the successful GitHub Actions workflow run summary
-- `github-actions-job-details.png`
-  What to capture: the workflow job expanded with the scan steps visible
 - `list-rules-output.png`
   What to capture: running `cloudrax-guard list-rules`
-- `repo-tree.png`
-  What to capture: the project structure in your editor or file tree
 
 After you add them, these sections will render as the visual proof for the project:
 
@@ -141,8 +137,6 @@ cloudrax-guard/
 ├── .github/workflows/
 └── README.md
 ```
-
-![Repository structure](docs/screenshots/repo-tree.png)
 
 ## Installation
 
@@ -318,8 +312,6 @@ This demonstrates the real adoption pattern:
 - show risky infra findings
 - avoid immediate blocking on intentionally insecure demo files
 
-![GitHub Actions scan job](docs/screenshots/github-actions-job-details.png)
-
 ## Example Terraform Sets
 
 ### Insecure
@@ -411,9 +403,7 @@ Create `docs/screenshots/` and save these exact files:
 - `cli-insecure-dry-run.png`
 - `cli-secure-pass.png`
 - `github-actions-scan-pass.png`
-- `github-actions-job-details.png`
 - `list-rules-output.png`
-- `repo-tree.png`
 
 Suggested capture commands:
 
@@ -424,11 +414,4 @@ cloudrax-guard list-rules
 pytest -q
 ```
 
-Optional extra screenshots if you want the README to look even stronger:
-
-- `pytest-pass.png`
-  Capture: successful `pytest -q` run
-- `json-output-demo.png`
-  Capture: `cloudrax-guard scan examples/insecure --format json --dry-run`
-
-If you add those too, you can easily extend the README later.
+These 4 are enough for a strong portfolio README without making it feel cluttered.
